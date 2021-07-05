@@ -13,6 +13,15 @@
 		24448F1326930FA300AA8487 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24448F1126930FA300AA8487 /* Main.storyboard */; };
 		24448F1526930FA700AA8487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24448F1426930FA700AA8487 /* Assets.xcassets */; };
 		24448F1826930FA700AA8487 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24448F1626930FA700AA8487 /* LaunchScreen.storyboard */; };
+		F16AAD9826931297005F58C0 /* WelcomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16AAD8826931297005F58C0 /* WelcomeManager.swift */; };
+		F16AAD9926931297005F58C0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16AAD8A26931297005F58C0 /* AppCoordinator.swift */; };
+		F16AAD9A26931297005F58C0 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16AAD8B26931297005F58C0 /* Storyboarded.swift */; };
+		F16AAD9B26931297005F58C0 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16AAD8C26931297005F58C0 /* CoordinatorDelegate.swift */; };
+		F16AAD9C26931297005F58C0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16AAD8E26931297005F58C0 /* NetworkManager.swift */; };
+		F16AAD9D26931297005F58C0 /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16AAD9126931297005F58C0 /* WelcomeModel.swift */; };
+		F16AAD9E26931297005F58C0 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16AAD9326931297005F58C0 /* FeedModel.swift */; };
+		F16AAD9F26931297005F58C0 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16AAD9526931297005F58C0 /* FeedManager.swift */; };
+		F16AADA026931297005F58C0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16AAD9726931297005F58C0 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		24448F1426930FA700AA8487 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24448F1726930FA700AA8487 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24448F1926930FA700AA8487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16AAD8826931297005F58C0 /* WelcomeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeManager.swift; sourceTree = "<group>"; };
+		F16AAD8A26931297005F58C0 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F16AAD8B26931297005F58C0 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		F16AAD8C26931297005F58C0 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
+		F16AAD8E26931297005F58C0 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F16AAD9126931297005F58C0 /* WelcomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
+		F16AAD9326931297005F58C0 /* FeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		F16AAD9526931297005F58C0 /* FeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
+		F16AAD9726931297005F58C0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,8 @@
 		24448F0A26930FA300AA8487 /* GroupProject2 */ = {
 			isa = PBXGroup;
 			children = (
+				F16AAD9626931297005F58C0 /* BaseViewController */,
+				F16AAD8626931297005F58C0 /* Infrastructure */,
 				24448F0B26930FA300AA8487 /* AppDelegate.swift */,
 				24448F0D26930FA300AA8487 /* SceneDelegate.swift */,
 				24448F0F26930FA300AA8487 /* ViewController.swift */,
@@ -65,6 +85,85 @@
 				24448F1926930FA700AA8487 /* Info.plist */,
 			);
 			path = GroupProject2;
+			sourceTree = "<group>";
+		};
+		F16AAD8626931297005F58C0 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				F16AAD8726931297005F58C0 /* WelcomeAPI */,
+				F16AAD8926931297005F58C0 /* Coordinator */,
+				F16AAD8D26931297005F58C0 /* NetworkManager */,
+				F16AAD8F26931297005F58C0 /* Models */,
+				F16AAD9426931297005F58C0 /* FeedAPI */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		F16AAD8726931297005F58C0 /* WelcomeAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F16AAD8826931297005F58C0 /* WelcomeManager.swift */,
+			);
+			path = WelcomeAPI;
+			sourceTree = "<group>";
+		};
+		F16AAD8926931297005F58C0 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F16AAD8A26931297005F58C0 /* AppCoordinator.swift */,
+				F16AAD8B26931297005F58C0 /* Storyboarded.swift */,
+				F16AAD8C26931297005F58C0 /* CoordinatorDelegate.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F16AAD8D26931297005F58C0 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				F16AAD8E26931297005F58C0 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		F16AAD8F26931297005F58C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F16AAD9026931297005F58C0 /* WelcomeModel */,
+				F16AAD9226931297005F58C0 /* FeedModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F16AAD9026931297005F58C0 /* WelcomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				F16AAD9126931297005F58C0 /* WelcomeModel.swift */,
+			);
+			path = WelcomeModel;
+			sourceTree = "<group>";
+		};
+		F16AAD9226931297005F58C0 /* FeedModel */ = {
+			isa = PBXGroup;
+			children = (
+				F16AAD9326931297005F58C0 /* FeedModel.swift */,
+			);
+			path = FeedModel;
+			sourceTree = "<group>";
+		};
+		F16AAD9426931297005F58C0 /* FeedAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F16AAD9526931297005F58C0 /* FeedManager.swift */,
+			);
+			path = FeedAPI;
+			sourceTree = "<group>";
+		};
+		F16AAD9626931297005F58C0 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F16AAD9726931297005F58C0 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +238,16 @@
 			files = (
 				24448F1026930FA300AA8487 /* ViewController.swift in Sources */,
 				24448F0C26930FA300AA8487 /* AppDelegate.swift in Sources */,
+				F16AAD9B26931297005F58C0 /* CoordinatorDelegate.swift in Sources */,
+				F16AAD9926931297005F58C0 /* AppCoordinator.swift in Sources */,
+				F16AAD9C26931297005F58C0 /* NetworkManager.swift in Sources */,
+				F16AADA026931297005F58C0 /* BaseViewController.swift in Sources */,
+				F16AAD9826931297005F58C0 /* WelcomeManager.swift in Sources */,
+				F16AAD9D26931297005F58C0 /* WelcomeModel.swift in Sources */,
+				F16AAD9E26931297005F58C0 /* FeedModel.swift in Sources */,
 				24448F0E26930FA300AA8487 /* SceneDelegate.swift in Sources */,
+				F16AAD9F26931297005F58C0 /* FeedManager.swift in Sources */,
+				F16AAD9A26931297005F58C0 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
